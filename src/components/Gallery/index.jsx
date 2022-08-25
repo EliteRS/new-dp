@@ -107,8 +107,8 @@ export default function Gallery({ src, index, columnOffset }) {
           end: () => `+=${ref.current.offsetWidth}`,
         },
       });
-      ScrollTrigger.refresh();
       ScrollTrigger.removePin()
+      ScrollTrigger.refresh();
     });
   }, []);
 
