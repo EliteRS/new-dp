@@ -17,7 +17,7 @@
 //     width: 0;
 //     height: 0;
 //     // width: 2px;
-    
+
 //     background: transparent; /* make scrollbar transparent */
 // }
 
@@ -48,7 +48,7 @@
 //   left: 0;
 //   bottom: 0;
 //   right: 0;
- 
+
 //   background-color: black;
 //   z-index: 1;
 // }
@@ -129,18 +129,17 @@
 $bg-color: #f5f0ec;
 
 html {
-    overflow: scroll;
-    // margin: 0;
-    // padding: 0;
-  }
-  ::-webkit-scrollbar {
-      width: 0;
-      height: 0;
-      // width: 2px;
-      
-      background: transparent; /* make scrollbar transparent */
-  }
+  overflow: scroll;
+  // margin: 0;
+  // padding: 0;
+}
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  // width: 2px;
 
+  background: transparent; /* make scrollbar transparent */
+}
 
 body {
   font-family: "Poppins", sans-serif;
@@ -152,12 +151,16 @@ body {
 
 .main-container {
   padding: 0 5vw;
+  height: auto;
+  width: auto;
   // clip-path: inset(100% 0% 0% 0%);
   // backface-visibility: hidden;
 }
 
 section {
   padding: 100px 0;
+  height: auto;
+  width: auto;
   .section-header {
     margin-bottom: 50px;
   }
