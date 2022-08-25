@@ -1,0 +1,38 @@
+.header-container {
+  position: relative;
+  margin-top: -15%;
+  // padding-top: -200px;
+  // bottom: 50%;
+  // height: 75vh;
+  // height: 100%;
+  // .header-menu{
+  //   position: absolute;
+  //   left: 0;
+  //   top: 100px;
+
+  //   letter-spacing: 1px;
+  //   font-family: 'Syncopate', sans-serif;
+  //   color: #626262;
+  //   font-weight: 600;
+  //   text-transform: uppercase;
+
+  //   li {
+  //     margin: 10px 0;
+  //   }
+  // }
+
+  h1 {
+    font-size: 18vw;
+    text-transform: uppercase;
+    text-align: center;
+
+    font-family: "Bai Jamjuree", sans-serif;
+    font-weight: 600;
+  }
+}
+// .lineParent {
+//   overflow: hidden;
+//   .lineChildren {
+//     transform: translate(0, 500px);
+//   }
+// }

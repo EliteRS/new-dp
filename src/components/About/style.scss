@@ -1,0 +1,26 @@
+.about-section {
+    p {
+      font-size: 50px;
+      line-height: 1.28;
+      text-align: justify;
+      opacity: 0;
+  
+      > div {
+        opacity: 0;
+        transform: translateY(0px);
+      }
+      &.is-reveal {
+        opacity: 1;
+      }
+    }
+   
+    // h2{
+    //   font-family: "Bai Jamjuree";
+    // }
+  }
+
+  .company-h1{
+    font-size: 80px;
+    font-weight: 500;
+    margin: -40px 0 ;
+  }

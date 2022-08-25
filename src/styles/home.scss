@@ -1,0 +1,118 @@
+// @import url("https://fonts.googleapis.com/css?family=Oswald:300;700&display=swap");
+// @import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap");
+// @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@100;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@100;700&display=swap");
+
+$bg-color: #f5f0ec;
+html {
+  overflow: scroll;
+  // margin: 0;
+  // padding: 0;
+}
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    // width: 2px;
+    
+    background: transparent; /* make scrollbar transparent */
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  // overflow: hidden;
+  cursor: none;
+  margin: 0;
+  padding: 0;
+  background-color: $bg-color;
+}
+
+.main-container {
+  padding: 0 5vw;
+  // clip-path: inset(100% 0% 0% 0%);
+  // backface-visibility: hidden;
+}
+
+section {
+  padding: 1% 0 ;
+  .section-header {
+    margin-bottom: 50px;
+  }
+}
+.absolute {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+ 
+  background-color: black;
+  z-index: 1;
+}
+
+.loader-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: all 0.25s ease-in-out;
+  background-color: #191919;
+  color: #dbd8d6;
+  bottom: 0;
+  h1 {
+    font-size: 1.5vw;
+    text-transform: uppercase;
+    font-family: "Bai Jamjuree", sans-serif;
+    font-weight: 600;
+  }
+  h2 {
+    font-size: 1.5vw;
+
+    text-transform: uppercase;
+    font-family: "Bodoni Moda", serif;
+    font-style: italic;
+    margin-top: 10px;
+  }
+// .absolute {
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   bottom: 0;
+//   padding-bottom: -120px;
+//   right: 0;
+//   background-color: black;
+//   // z-index: 1;
+//   // margin: 0;
+//   // padding: 0;
+//   // overflow: hidden
+// }
+
+// .loader-wrapper {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   flex-direction: column;
+//   background-color: #191919;
+//   color: #dbd8d6;
+//   transition: all 0.35s ease-in-out;
+//   // overflow: hidden;
+//   // height: 100vh;
+//   // bottom: 20;
+//   h1 {
+//     font-size: 1.5vw;
+//     text-transform: uppercase;
+//     font-family: "Bai Jamjuree", sans-serif;
+//     font-weight: 600;
+//   }
+//   h2 {
+//     font-size: 1.5vw;
+
+//     text-transform: uppercase;
+//     font-family: "Bodoni Moda", serif;
+//     font-style: italic;
+//     margin-top: 10px;
+//   }
+}

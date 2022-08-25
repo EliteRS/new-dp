@@ -1,0 +1,131 @@
+.summary-container {
+  // background: #eee;
+  // font-family: "Architects Daughter", cursive;
+  background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+  /* padding: 50px 16px; */
+  /* padding-bottom: 200px; */
+  padding: 0 16px 100vh 16px;
+  // background-image: radial-gradient(#bfc0c1 7.2%, transparent 0);
+
+  /* padding: 0;  */
+  // padding-bottom: 100px;
+  margin: 0;
+  box-sizing: border-box;
+
+  // border-color: #000000;
+  // border: 1px solid black;
+  // display: block;
+  // justify-content: center;
+}
+
+.summary-header {
+  // background-color: rgb(20, 20, 20);
+  background-color: #191919;
+  margin: 0 -120px 30px;
+  padding: 30px 32px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+.summary-header h1 {
+  color: #fff;
+  font-size: 35px;
+  // font-family: "McLaren", cursive;
+  // font-weight: 200;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-family: "Syncopate", sans-serif;
+  // color: #626262;
+}
+
+.summary-footer {
+  position: absolute;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
+}
+
+.summary-footer p {
+  color: #ccc;
+}
+.note {
+  background: #fff;
+  border-radius: 7px;
+  box-shadow: 0 2px 5px #ccc;
+  padding: 25px;
+  width: 300px;
+  margin: 16px 32px;
+  float: left;
+  position: relative;
+  top: 0;
+  transition: top ease-in-out 0.3s;
+  // justify-content: center;
+}
+
+.note:hover{
+  top: -10px;
+}
+
+.note h1 {
+  font-size: 1.5em;
+  font-weight: 500;
+  margin-top: -1px;
+  color: #d21612;
+}
+.note p {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  line-height: 1.3em;
+  text-align: justify;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+// .note button {
+//   position: relative;
+//   float: right;
+//   margin-right: 10px;
+//   color: #000000;
+//   background-color: white;
+//   border: none;
+//   width: 36px;
+//   height: 36px;
+//   cursor: pointer;
+//   outline: none;
+// }
+
+form.create-note {
+  position: relative;
+  width: 480px;
+  margin: 30px auto 20px auto;
+  background: #fff;
+  padding: 15px;
+  border-radius: 7px;
+  box-shadow: 0 1px 5px rgb(138, 137, 137);
+}
+form.create-note input,
+form.create-note textarea {
+  width: 100%;
+  border: none;
+  padding: 4px;
+  outline: none;
+  font-size: 1.2em;
+  font-family: inherit;
+  resize: none;
+}
+form.create-note button {
+  position: absolute;
+  right: 18px;
+  bottom: -18px;
+  background: #000000;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  outline: none;
+}
