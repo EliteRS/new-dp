@@ -108,6 +108,7 @@ export default function Gallery({ src, index, columnOffset }) {
         },
       });
       ScrollTrigger.refresh();
+      ScrollTrigger.removePin()
     });
   }, []);
 
