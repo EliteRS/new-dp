@@ -6,8 +6,9 @@
   // height: 0 !important;
   top: 0 !important;
   bottom: 0 !important;
-  // zoom: reset;
+  zoom: reset !important;
   overflow: hidden !important;
+  
   // zoom: 50%;
   // color: green !important;
 }
@@ -17,9 +18,10 @@
   margin-left: -5vw;
   margin-right: -5vw;
   // position: fixed;
+  zoom: reset !important;
   top: 0;
   bottom: 0;
-
+  // overflow: hidden !important;
 }
 
 .gallery-counter {
