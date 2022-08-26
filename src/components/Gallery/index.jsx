@@ -113,16 +113,16 @@ export default function Gallery({ src, index, columnOffset }) {
       gsap.set("section.spacer", {
         minHeight:
           window.innerHeight -
-          document.querySelector(".gallery-item-wrapper").offsetHeight,
+          document.querySelector(".wrapper").offsetHeight,
       });
 
       gsap.to(sections, {
         xPercent: -100 * (sections.length - 1),
         ease: "none",
         scrollTrigger: {
-          trigger: ".gallery-item-wrapper",
-          scroller: "#main-container",
+          trigger: ".wrapper",
           pin: ".wrapper",
+          scroller: "#main-container",
           pinSpacer: false,
           // pinSpace: false,
           // markers: true,
@@ -146,6 +146,7 @@ export default function Gallery({ src, index, columnOffset }) {
       
       
       ScrollTrigger.refresh();
+      ScrollTrigger.kill(true);
       
     });
   }, []);
@@ -155,7 +156,7 @@ export default function Gallery({ src, index, columnOffset }) {
   };
 
   return (
-    <section data-scroll-section className="section-gallery-wrapper gallery-wrap">
+    <section data-scroll-section className="section-wrapper gallery-wrap">
      <div className="wrapper">
         <div className="gallery" ref={ref}>
           <div className="gallery-counter">
