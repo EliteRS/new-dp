@@ -6,7 +6,8 @@
   // height: 0 !important;
   top: 0 !important;
   bottom: 0 !important;
-
+  width: auto !important;
+  float: none !important;
   overflow: hidden !important;
   
   // zoom: 50%;
@@ -128,5 +129,3 @@
     filter: grayscale(100%) sepia(20%) brightness(80%);
   }
 }
-
-

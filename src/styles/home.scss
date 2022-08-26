@@ -35,6 +35,8 @@ body {
   padding: 0 5vw;
   height: auto;
   width: auto;
+  bottom: 0;
+  
   // clip-path: inset(100% 0% 0% 0%);
   // backface-visibility: hidden;
 }
@@ -43,6 +45,9 @@ section {
   padding: 100px 0;
   height: auto;
   width: auto;
+  
+  top: 0;
+  bottom: 0;
   .section-header {
     margin-bottom: 50px;
   }
