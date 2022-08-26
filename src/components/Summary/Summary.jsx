@@ -24,8 +24,9 @@ export default function Summary() {
   // }
 
   return (
-    <section className="summary-container" data-scroll-section>
-    {/* <div className="summary-container"> */}
+    <section data-scroll-section className="section-wrapper summary-container">
+      
+        {/* <div className="summary-container"> */}
         <Title />
         {/* <CreateArea  /> */}
         {notes.map((noteItem, index) => {
@@ -40,7 +41,8 @@ export default function Summary() {
           );
         })}
         {/* <Footer /> */}
-    {/* </div> */}
-      </section>
+        {/* </div> */}
+      
+    </section>
   );
 }
