@@ -94,14 +94,14 @@ export default function Gallery({ src, index, columnOffset }) {
         xPercent: -100 * (sections.length - 1),
         ease: "none",
         scrollTrigger: {
-          pinSpacer: false,
           pinType: "relative",
           // pinSpacing: false,
           start: "top 50px",
           trigger: ref.current,
           scroller: "#main-container",
           pin: true,
-
+          pinSpacer: false,
+          
           scrub: 0.5,
           snap: 1 / (sections.length - 1),
           end: () => `+=${ref.current.offsetWidth}`,
