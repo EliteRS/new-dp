@@ -120,10 +120,6 @@ export default function Gallery({ src, index, columnOffset }) {
         xPercent: -100 * (sections.length - 1),
         ease: "none",
         scrollTrigger: {
-          // pinType: "relative",
-          // pinSpacing: false,
-          // start: "top top", //50px
-          // start: "top 50%",
           trigger: ".section-wrapper",
           scroller: "#main-container",
           pin: ".wrapper",
@@ -148,8 +144,6 @@ export default function Gallery({ src, index, columnOffset }) {
       
       });
       
-      // ScrollTrigger.kill(true);
-      // ScrollTrigger.removePin()
       ScrollTrigger.refresh();
 
       
