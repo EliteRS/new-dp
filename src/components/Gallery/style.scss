@@ -1,11 +1,15 @@
 .pin-spacer {
-  padding: 0 !important;
-  padding-bottom: 0px !important;
-  margin: 0 !important;
+  // position: absolute !important;
+  padding: 0% !important;
+  padding-bottom: 0% !important;
+  margin: 0% !important;
   // height: 0 !important;
   top: 0 !important;
+  bottom: 0 !important;
+  // zoom: reset;
   overflow: hidden !important;
-
+  // zoom: 50%;
+  // color: green !important;
 }
 .gallery-wrap {
   // position: fixed;

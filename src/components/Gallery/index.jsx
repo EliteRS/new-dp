@@ -56,7 +56,7 @@ function GalleryItem({
   }, [onScreen, index]);
 
   return (
-    <div className="wrapper">
+    <div className="gwrapper">
       <div
         className={cn("gallery-item-wrapper", { "is-reveal": onScreen })}
         ref={ref}
@@ -113,17 +113,17 @@ export default function Gallery({ src, index, columnOffset }) {
       gsap.set("section.spacer", {
         minHeight:
           window.innerHeight -
-          document.querySelector(".section-wrapper").offsetHeight,
+          document.querySelector(".gallery-item").offsetHeight,
       });
 
       gsap.to(sections, {
         xPercent: -100 * (sections.length - 1),
         ease: "none",
         scrollTrigger: {
-          trigger: ".section-wrapper",
+          trigger: ".gallery-item",
           scroller: "#main-container",
           pin: ".wrapper",
-          pinSpacer: false,
+          // pinSpacer: false,
           // pinSpace: false,
           // markers: true,
           scrub: 0.5,
