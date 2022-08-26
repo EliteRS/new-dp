@@ -76,8 +76,8 @@ const Home = () => {
           <Header />
           <Featured />
           <About />
-          <Gallery />
-          {/* <Docs /> */}
+          {/* <Gallery /> */}
+          <Docs />
           <Summary />
           <Carousel />
           {/* <Footer /> */}
