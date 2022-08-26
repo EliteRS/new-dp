@@ -12,17 +12,17 @@ const Carousel = () => {
   }, []);
   // 21760 1352
   return (
-    <section className="appendix" data-scroll-section>
-    <h1 className="carousel-h1">APPENDIX</h1>
-      <motion.div ref={carousel} className="carousel" whileTap={{cursor: "grabbing"}}>
+    <section className="car-appendix" data-scroll-section>
+    <h1 className="car-carousel-h1">APPENDIX</h1>
+      <motion.div ref={carousel} className="car-carousel" whileTap={{cursor: "grabbing"}}>
         <motion.div
           drag="x"
           dragConstraints={{ right: 0, left: -width }}
-          className="inner-carousel"
+          className="car-inner-carousel"
         >
           {images.map((image, index) => {
             return (
-              <motion.div className="item" key={index}>
+              <motion.div className="car-item" key={index}>
                 <img src={image} alt="Documentations "></img>
               </motion.div>
             );
