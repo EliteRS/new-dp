@@ -56,23 +56,25 @@ function GalleryItem({
   }, [onScreen, index]);
 
   return (
-    <div
-      className={cn("gallery-item-wrapper", { "is-reveal": onScreen })}
-      ref={ref}
-    >
-      <div></div>
-      <div className="gallery-item">
-        <div className="gallery-item-info">
-          <h1 className="gallery-info-title">{title}</h1>
-          <h2 className="gallery-info-subtitle">{subtitle}</h2>
-          <p className="gallery-info-category">{category}</p>
+    <div className="wrapper">
+      <div
+        className={cn("gallery-item-wrapper", { "is-reveal": onScreen })}
+        ref={ref}
+      >
+        <div></div>
+        <div className="gallery-item">
+          <div className="gallery-item-info">
+            <h1 className="gallery-info-title">{title}</h1>
+            <h2 className="gallery-info-subtitle">{subtitle}</h2>
+            <p className="gallery-info-category">{category}</p>
+          </div>
+          <div
+            className="gallery-item-image"
+            style={{ backgroundImage: `url(${src})` }}
+          ></div>
         </div>
-        <div
-          className="gallery-item-image"
-          style={{ backgroundImage: `url(${src})` }}
-        ></div>
+        <div></div>
       </div>
-      <div></div>
     </div>
   );
 }
@@ -88,23 +90,50 @@ export default function Gallery({ src, index, columnOffset }) {
       console.log(ref.current.offsetWidth);
       console.log(ref.current.clientWidth);
       console.log({ current: ref.current });
+      gsap.registerPlugin(ScrollTrigger);
+
       let sections = gsap.utils.toArray(".gallery-item-wrapper");
+      let maxWidth = 0;
+
+      const getMaxWidth = () => {
+        maxWidth = 0;
+        sections.forEach((section) => {
+          maxWidth += section.offsetWidth;
+          maxWidth += gsap.getProperty(section, "marginLeft");
+        });
+        maxWidth += 20;
+        maxWidth += window.innerWidth;
+        maxWidth -= sections[0].offsetWidth;
+        return maxWidth;
+      };
+
+      getMaxWidth();
+      ScrollTrigger.addEventListener("refreshInit", getMaxWidth);
+
+      gsap.set("section.spacer", {
+        minHeight:
+          window.innerHeight -
+          document.querySelector(".gallery").offsetHeight,
+      });
 
       gsap.to(sections, {
         xPercent: -100 * (sections.length - 1),
         ease: "none",
         scrollTrigger: {
-          pinType: "relative",
+          // pinType: "relative",
           // pinSpacing: false,
-          start: "top 50px",
-          trigger: ref.current,
+          start: "top top", //50px
+          trigger: ".gallery",
           scroller: "#main-container",
-          pin: true,
+          pin: ".wrapper",
           pinSpacer: false,
-          
+          // pinSpace: false,
+          // markers: true,
           scrub: 0.5,
           snap: 1 / (sections.length - 1),
           end: () => `+=${ref.current.offsetWidth}`,
+          invalidateOnRefresh: true,
+          // end: "200%",
         },
       });
       // ScrollTrigger.kill(true);
@@ -119,23 +148,25 @@ export default function Gallery({ src, index, columnOffset }) {
 
   return (
     <section data-scroll-section className="section-wrapper gallery-wrap">
-      <div className="gallery" ref={ref}>
-        <div className="gallery-counter">
-          <h2 style={{ color: "white", marginBottom: "30px" }}>
-            Scroll to discover more
-          </h2>
-          <span>{activeImage}</span>
-          <span className="divider" />
-          <span>{images.length}</span>
+      <div className="wrapper">
+        <div className="gallery" ref={ref}>
+          <div className="gallery-counter">
+            <h2 style={{ color: "white", marginBottom: "30px" }}>
+              Scroll to discover more
+            </h2>
+            <span>{activeImage}</span>
+            <span className="divider" />
+            <span>{images.length}</span>
+          </div>
+          {images.map((image, index) => (
+            <GalleryItem
+              key={index}
+              index={index}
+              {...image}
+              updateActiveImage={handleUpdateActiveImage}
+            />
+          ))}
         </div>
-        {images.map((image, index) => (
-          <GalleryItem
-            key={index}
-            index={index}
-            {...image}
-            updateActiveImage={handleUpdateActiveImage}
-          />
-        ))}
       </div>
     </section>
   );
