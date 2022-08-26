@@ -56,7 +56,7 @@ function GalleryItem({
   }, [onScreen, index]);
 
   return (
-    <div className="wrapper">
+    // <div className="wrapper">
       <div
         className={cn("gallery-item-wrapper", { "is-reveal": onScreen })}
         ref={ref}
@@ -75,7 +75,7 @@ function GalleryItem({
         </div>
         <div></div>
       </div>
-    </div>
+    // </div>
   );
 }
 
@@ -90,6 +90,7 @@ export default function Gallery({ src, index, columnOffset }) {
       console.log(ref.current.offsetWidth);
       console.log(ref.current.clientWidth);
       console.log({ current: ref.current });
+      
       gsap.registerPlugin(ScrollTrigger);
 
       let sections = gsap.utils.toArray(".gallery-item-wrapper");
@@ -113,7 +114,7 @@ export default function Gallery({ src, index, columnOffset }) {
       gsap.set("section.spacer", {
         minHeight:
           window.innerHeight -
-          document.querySelector(".gallery").offsetHeight,
+          document.querySelector(".gallery-item").offsetHeight,
       });
 
       gsap.to(sections, {
@@ -122,8 +123,8 @@ export default function Gallery({ src, index, columnOffset }) {
         scrollTrigger: {
           // pinType: "relative",
           // pinSpacing: false,
-          start: "top top", //50px
-          trigger: ".gallery",
+          // start: "top top", //50px
+          trigger: ".gallery-item",
           scroller: "#main-container",
           pin: ".wrapper",
           pinSpacer: false,
@@ -131,14 +132,27 @@ export default function Gallery({ src, index, columnOffset }) {
           // markers: true,
           scrub: 0.5,
           snap: 1 / (sections.length - 1),
-          end: () => `+=${ref.current.offsetWidth}`,
+          end: () => `+=${maxWidth}`,
           invalidateOnRefresh: true,
           // end: "200%",
         },
       });
+
+
+      sections.forEach((sct, i) => {
+        ScrollTrigger.create({
+          trigger: sct,
+          start: () => 'top top-=' + (sct.offsetLeft - window.innerWidth / 2) * (maxWidth / (maxWidth - window.innerWidth)),
+          end: () => '+=' + sct.offsetWidth * (maxWidth / (maxWidth - window.innerWidth)),
+          toggleClass: { targets: sct, className: "active" } });
+      
+      });
+      
       // ScrollTrigger.kill(true);
       // ScrollTrigger.removePin()
       ScrollTrigger.refresh();
+
+      
     });
   }, []);
 
