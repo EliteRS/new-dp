@@ -1,0 +1,44 @@
+
+.docs-item {
+    min-height: 40rem;
+    min-width: 80rem;
+    padding: 40px 80px;
+  }
+  
+  .docs-item img {
+    width: 100%;
+    height: 90%;
+    border-radius: 1rem;
+    pointer-events: none;
+  }
+  
+  .docs-inner-carousel {
+    display: flex;
+  }
+  
+  .docs-carousel {
+    cursor: grab;
+    overflow: hidden;
+  }
+  
+  .docs-carousel-h1 {
+    font-size: 50px;
+    margin: 0 0 20px 0;
+    // color: black;
+    color: white;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-family: "Syncopate", sans-serif;
+    // font-family: "Bodoni Moda", serif;
+  }
+  
+  .docs-appendix {
+    background-color: #191919;
+    height: 90vh;
+    // padding-bottom: 500px;
+    margin: 0 -100px 0 -100px;
+    // padding: 20px 0 0 0 0;
+    // height: 100vh;
+  }
+  

@@ -14,6 +14,7 @@ import useLocoScroll from "../hooks/useLocoScroll";
 
 import "../styles/home.scss";
 import Carousel from "../components/Carousel/Carousel";
+import Docs from "../components/Documentation/Docs";
 
 const Home = () => {
   const ref = useRef(null);
@@ -75,7 +76,8 @@ const Home = () => {
           <Header />
           <Featured />
           <About />
-          <Gallery />
+          {/* <Gallery /> */}
+          <Docs />
           <Summary />
           <Carousel />
           {/* <Footer /> */}
