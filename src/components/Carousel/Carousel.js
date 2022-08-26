@@ -8,7 +8,6 @@ const Carousel = () => {
   const carousel = useRef();
 
   useEffect(() => {
-    // console.log(carousel.current.scrollWidth, carousel.current.offsetWidth);
     setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
   }, []);
   // 21760 1352
