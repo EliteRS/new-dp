@@ -113,14 +113,14 @@ export default function Gallery({ src, index, columnOffset }) {
       gsap.set("section.spacer", {
         minHeight:
           window.innerHeight -
-          document.querySelector(".gallery-wrap").offsetHeight,
+          document.querySelector(".gallery-item-wrapper").offsetHeight,
       });
 
       gsap.to(sections, {
         xPercent: -100 * (sections.length - 1),
         ease: "none",
         scrollTrigger: {
-          trigger: ".gallery-wrap",
+          trigger: ".gallery-item-wrapper",
           scroller: "#main-container",
           pin: ".wrapper",
           pinSpacer: false,
@@ -155,7 +155,7 @@ export default function Gallery({ src, index, columnOffset }) {
   };
 
   return (
-    <section data-scroll-section className="gallery-wrap">
+    <section data-scroll-section className="section-gallery-wrapper gallery-wrap">
      <div className="wrapper">
         <div className="gallery" ref={ref}>
           <div className="gallery-counter">
