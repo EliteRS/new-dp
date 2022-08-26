@@ -13,7 +13,7 @@ const Docs = () => {
   // 21760 1352
   return (
     <section className="docs-appendix" data-scroll-section>
-    {/* <h1 className="docs-carousel-h1"></h1> */}
+    <h1 className="docs-carousel-h1">Grab & Swipe to see more</h1>
       <motion.div ref={carousel} className="docs-carousel" whileTap={{cursor: "grabbing"}}>
         <motion.div
           drag="x"
