@@ -24,7 +24,7 @@
   // border: 1px solid black;
   // display: block;
   // justify-content: center;
-
+position: static;
   .summary-header {
     // background-color: rgb(20, 20, 20);
     background-color: #191919;
@@ -135,4 +135,14 @@ form.create-note button {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   cursor: pointer;
   outline: none;
+}
+@media only screen and (max-width: 1380px){
+  .summary-container{
+    height: 200vh;
+  }
+}
+@media only screen and (max-width: 920px){
+  .summary-container{
+    height: 350vh;
+  }
 }
