@@ -1,12 +1,15 @@
-import React from 'react';
-import { Route, Routes } from 'react-router-dom';
-import Index from './pages/index';
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+// import Index from './pages/index';
+import Home from "./containers/Home";
 
 function App() {
   return (
-    <Routes>
-			<Route path='/' element={<Index />} />
-		</Routes>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </Router>
   );
 }
 
