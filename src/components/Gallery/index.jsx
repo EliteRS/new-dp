@@ -129,7 +129,7 @@ export default function Gallery({ src, index, columnOffset }) {
           pin: ".wrapper",
           pinSpacer: false,
           // pinSpace: false,
-          markers: true,
+          // markers: true,
           scrub: 0.5,
           snap: 1 / (sections.length - 1),
           end: () => `+=${maxWidth}`,
