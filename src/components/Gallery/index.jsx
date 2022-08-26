@@ -56,7 +56,7 @@ function GalleryItem({
   }, [onScreen, index]);
 
   return (
-    // <div className="wrapper">
+    <div className="wrapper">
       <div
         className={cn("gallery-item-wrapper", { "is-reveal": onScreen })}
         ref={ref}
@@ -75,7 +75,7 @@ function GalleryItem({
         </div>
         <div></div>
       </div>
-    // </div>
+    </div>
   );
 }
 
@@ -90,7 +90,6 @@ export default function Gallery({ src, index, columnOffset }) {
       console.log(ref.current.offsetWidth);
       console.log(ref.current.clientWidth);
       console.log({ current: ref.current });
-      
       gsap.registerPlugin(ScrollTrigger);
 
       let sections = gsap.utils.toArray(".gallery-item-wrapper");
@@ -114,7 +113,7 @@ export default function Gallery({ src, index, columnOffset }) {
       gsap.set("section.spacer", {
         minHeight:
           window.innerHeight -
-          document.querySelector(".gallery-item").offsetHeight,
+          document.querySelector(".section-wrapper").offsetHeight,
       });
 
       gsap.to(sections, {
@@ -124,12 +123,13 @@ export default function Gallery({ src, index, columnOffset }) {
           // pinType: "relative",
           // pinSpacing: false,
           // start: "top top", //50px
-          trigger: ".gallery-item",
+          // start: "top 50%",
+          trigger: ".section-wrapper",
           scroller: "#main-container",
           pin: ".wrapper",
           pinSpacer: false,
           // pinSpace: false,
-          // markers: true,
+          markers: true,
           scrub: 0.5,
           snap: 1 / (sections.length - 1),
           end: () => `+=${maxWidth}`,
@@ -162,7 +162,7 @@ export default function Gallery({ src, index, columnOffset }) {
 
   return (
     <section data-scroll-section className="section-wrapper gallery-wrap">
-      <div className="wrapper">
+     <div className="wrapper">
         <div className="gallery" ref={ref}>
           <div className="gallery-counter">
             <h2 style={{ color: "white", marginBottom: "30px" }}>
