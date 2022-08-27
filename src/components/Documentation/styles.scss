@@ -42,4 +42,13 @@
     // padding: 20px 0 0 0 0;
     // height: 100vh;
   }
-  
+  @media only screen and (max-width: 1380px), screen and (max-height: 868px){
+    .docs-appendix{
+      height: 140vh;
+    }
+  }
+  @media only screen and (max-width: 920px), screen and (max-height: 670px){
+    .docs-appendix{
+      height: 180vh;
+    }
+  }

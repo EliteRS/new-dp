@@ -136,13 +136,13 @@ form.create-note button {
   cursor: pointer;
   outline: none;
 }
-@media only screen and (max-width: 1380px){
+@media only screen and (max-width: 1380px), screen and (max-height: 868px){
   .summary-container{
     height: 200vh;
   }
 }
-@media only screen and (max-width: 920px){
+@media only screen and (max-width: 920px), screen and (max-height: 670px){
   .summary-container{
-    height: 350vh;
+    height: 250vh;
   }
 }
