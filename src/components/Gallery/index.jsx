@@ -53,7 +53,7 @@ function GalleryItem({
     if (onScreen) {
       updateActiveImage(index);
     }
-  }, [onScreen, index]);
+  }, [onScreen, updateActiveImage]);
 
   return (
     <div className="wrapper">
