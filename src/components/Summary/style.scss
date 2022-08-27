@@ -13,7 +13,7 @@
   // padding-bottom: 100px;
   margin: 0;
   // box-sizing: border-box;
-  height: 150vh;
+  height: 120vh;
   top: 0;
   bottom: 0;
   // position: relative;
@@ -136,13 +136,18 @@ form.create-note button {
   cursor: pointer;
   outline: none;
 }
-@media only screen and (max-width: 1380px), screen and (max-height: 868px){
+@media only screen and (max-width: 1380px), screen and (max-height: 900px){
   .summary-container{
     height: 200vh;
   }
 }
-@media only screen and (max-width: 920px), screen and (max-height: 670px){
+@media only screen and (max-width: 1360px), screen and (max-height: 854px){
   .summary-container{
     height: 250vh;
+  }
+}
+@media only screen and (max-width: 920px), screen and (max-height: 680px){
+  .summary-container{
+    height: 280vh;
   }
 }

@@ -27,3 +27,12 @@
     font-weight: 500;
     margin: -40px 0 ;
   }
+
+  @media only screen and (max-width: 1430px), screen and (max-height: 684px){
+    .about-section p{
+      font-size: 35px;
+      line-height: 1.28;
+      text-align: justify;
+      opacity: 0;
+    }
+  }
